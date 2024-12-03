@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocina Mexicana Prehispánica</title>
+    <link rel="stylesheet" href="./css/style.css">  
+    <script src="./js/script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Cocina Mexicana Prehispánica</h1>
+    </header>
+
+    <nav>
+        <a href="#importancia">Importancia</a>
+        <a href="#muestras">Muestras Gastronómicas</a>
+        <a href="#recetario">Recetario</a>
+        <a href="#Consejos de Comida">Consejos de Comida</a>
+        <a href="#formulario">Contáctanos</a>
+    </nav>
+
+    <section id="importancia">
+        <h2>Importancia</h2>
+        <p>La comida prehispánica mexicana es fundamental no solo para la cultura, sino también para la identidad gastronómica del país...</p>
+    </section>
+
+    <section id="muestras">
+        <h2>Muestras Gastronómicas</h2>
+        <p>Algunos de los ingredientes más representativos de la cocina prehispánica son:</p>
+        <ul>
+            <li>Maíz</li>
+            <li>Cacao</li>
+            <li>Chile</li>
+            <li>Amaranto</li>
+            <li>Maguey</li>
+            <li>Nopal</li>
+        </ul>
+    </section>
+
+    <section id="recetario">
+        <h2>Recetario</h2>
+        <p>Aquí te presentamos algunas recetas tradicionales prehispánicas:</p>
+        
+        <!-- Video principal sobre cocina -->
+        <div class="video-container">
+            <h3>Video de Cocina del Día de Muertos</h3>
+            <video controls>
+                <source src="./image/video1.mp4" type="video/mp4">
+                Tu navegador no soporta el formato de video.
+            </video>
+        </div>
+    
+        <!-- Videos 2, 3 y 4 en fila horizontal -->
+        <div class="video-row">
+            <!-- Video 2 -->
+            <div class="video-container">
+                <h3>El Clima en Dia de Muertos</h3>
+                <video controls>
+                    <source src="./image/video2.mp4" type="video/mp4">
+                </video>
+            </div>
+    
+            <!-- Video 3 -->
+            <div class="video-container">
+                <h3>Datos Curiosos sobre el Dia de Muertos</h3>
+                <video controls>
+                    <source src="./image/video3.mp4" type="video/mp4">
+                </video>
+            </div>
+    
+            <!-- Video 4 -->
+            <div class="video-container">
+                <h3>Video sobre una receta tradicional de Dia de Muertos</h3>
+                <video controls>
+                    <source src="./image/video4.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <section id="formulario">
+            <button id="btn-formulario"> FORMULARIO DE VIDEOS</button>
+        </section>
+    
+        <script>
+            // Función para redirigir al formulario al hacer clic
+            document.getElementById('btn-formulario').addEventListener('click', function() {
+                window.location.href = 'formulario/formulario.html'; 
+            });
+        </script>
+    </section>
+
+    <section id="formulario">
+        <h2>Formulario de Contacto</h2>
+        <form id="form">
+            <div class="field">
+                <label for="to_name">Nombre del destinatario: </label>
+                <input type="text" name="to_name" id="to_name" required>
+            </div>
+            <div class="field">
+                <label for="from_name">Tu nombre: </label>
+                <input type="text" name="from_name" id="from_name" required>
+            </div>
+            <div class="field">
+                <label for="message">Mensaje</label>
+                <input type="text" name="message" id="message" required>
+            </div>
+            <div class="field">
+                <label for="reply_to">Correo electrónico: </label>
+                <input type="email" name="reply_to" id="reply_to" required>
+            </div>
+            <input type="submit" id="button" value="Enviar correo">
+        </form>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        // Inicializa EmailJS con tu User ID
+        emailjs.init('qLqtb2lAbynDpupfD');  // Reemplaza con tu verdadero User ID
+
+        // Lógica de envío del formulario
+        const btn = document.getElementById('button');
+        document.getElementById('form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            btn.value = 'Enviando...';
+
+            const serviceID = 'default_service';
+            const templateID = 'template_sir02nb';  // Reemplaza con tu template ID
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    btn.value = 'Enviar correo';
+                    alert('¡Correo enviado con éxito!');
+                }, (err) => {
+                    btn.value = 'Enviar correo';
+                    alert('Error al enviar el correo: ' + JSON.stringify(err));
+                });
+        });
+    </script>
+
+    <section id="Consejos de Comida">
+        <h2>Teotihuacán</h2>
+        <p>Otra excelente opción es <strong>Teotihuacán</strong>, que no solo tiene ruinas impresionantes, sino también lugares donde puedes disfrutar de la comida tradicional.</p>
+
+        <h1>¿Qué comer?</h1>
+        <ul>
+            <li><strong>Tamales de elote:</strong> Hechos con maíz, muy comunes en las regiones prehispánicas.</li>
+            <li><strong>Pulque:</strong> Una bebida alcohólica fermentada a base de maguey, utilizada por las culturas prehispánicas.</li>
+            <li><strong>Tlacoyos:</strong> Hechos de masa de maíz, rellenos de frijol o requesón.</li>
+        </ul>
+
+        <h1>Estimación de gastos</h1>
+        <p>Un almuerzo o comida típica de la zona puede costarte entre <strong>$100 a $250 MXN por persona</strong>.</p>
+
+        <h1>Distancia desde Pachuca</h1>
+        <p>Aproximadamente <strong>1.5 horas</strong> en auto.</p>       
+    </section>
+
+        <!-- Carrusel -->
+        <section id="Carrusel"> 
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <h2>Importancia</h2>
+                    <p>La comida prehispánica mexicana es fundamental para la cultura...</p>
+                </div>
+                <div class="carousel-item">
+                    <h2>Muestras Gastronómicas</h2>
+                    <p>Ingredientes representativos incluyen maíz, cacao, y chile...</p>
+                </div>
+                <div class="carousel-item">
+                    <h2>Recetario</h2>
+                    <p>Descubre recetas tradicionales como tamales y mole...</p>
+                </div>
+                <div class="carousel-item">
+                    <h2>Mejores Cocineros</h2>
+                    <p>Abigail Mendoza Ruiz y Gerardo Vázquez Lugo son destacados en la cocina prehispánica...</p>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="carousel-button" onclick="prevSlide()">&#10094;</button>
+                <button class="carousel-button" onclick="nextSlide()">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p id="contador">Número de visitas: </p>
+    </footer>
+
+</body>
+</html>

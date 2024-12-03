@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen de Cocina Prehispánica</title>
+    <script src="../js/script.js"></script>
+    <link rel="stylesheet" href="../css/style.css"> 
+</head>
+<body>
+    <div class="container">
+        <h1>Examen de Cocina Prehispánica</h1>
+        <form id="examen">
+            <div class="question">
+                <p>1. ¿Cuál de los siguientes ingredientes es originario de Mesoamérica?</p>
+                <label><input type="radio" name="q1" value="a"> Tomate</label>
+                <label><input type="radio" name="q1" value="b"> Papa</label>
+                <label><input type="radio" name="q1" value="c"> Arroz</label>
+                <label><input type="radio" name="q1" value="d"> Trigo</label>
+            </div>
+
+            <div class="question">
+                <p>2. Verdadero o Falso: El maíz es uno de los ingredientes más importantes en la cocina prehispánica.</p>
+                <label><input type="radio" name="q2" value="true"> Verdadero</label>
+                <label><input type="radio" name="q2" value="false"> Falso</label>
+            </div>
+
+            <div class="question">
+                <p>3. ¿Cuál es la bebida tradicional prehispánica que se elabora con maíz fermentado?</p>
+                <label><input type="radio" name="q3" value="a"> Atole</label>
+                <label><input type="radio" name="q3" value="b"> Pulque</label>
+                <label><input type="radio" name="q3" value="c"> Tepache</label>
+                <label><input type="radio" name="q3" value="d"> Mezcal</label>
+            </div>
+
+            <div class="question">
+                <p>4. Verdadero o Falso: El chile fue un ingrediente que llegó con los españoles a América.</p>
+                <label><input type="radio" name="q4" value="true"> Verdadero</label>
+                <label><input type="radio" name="q4" value="false"> Falso</label>
+            </div>
+
+            <div class="question">
+                <p>5. ¿Qué tipo de carnes eran comúnmente consumidas en la cocina prehispánica?</p>
+                <label><input type="radio" name="q5" value="a"> Cerdo y vaca</label>
+                <label><input type="radio" name="q5" value="b"> Venado y pavo</label>
+                <label><input type="radio" name="q5" value="c"> Pollo y cordero</label>
+                <label><input type="radio" name="q5" value="d"> Ninguna de las anteriores</label>
+            </div>
+
+            <div class="question">
+                <p>6. ¿Qué es el mole?</p>
+                <label><input type="radio" name="q6" value="a"> Una salsa a base de chile y especias</label>
+                <label><input type="radio" name="q6" value="b"> Un tipo de pan tradicional</label>
+                <label><input type="radio" name="q6" value="c"> Un tamal relleno de pollo</label>
+                <label><input type="radio" name="q6" value="d"> Un licor hecho con hierbas</label>
+            </div>
+
+            <div class="question">
+                <p>7. Verdadero o Falso: Los antiguos mesoamericanos utilizaban el cacao para preparar una bebida amarga.</p>
+                <label><input type="radio" name="q7" value="true"> Verdadero</label>
+                <label><input type="radio" name="q7" value="false"> Falso</label>
+            </div>
+
+            <div class="question">
+                <p>8. ¿Qué tipo de vegetales eran cultivados por las civilizaciones prehispánicas?</p>
+                <label><input type="radio" name="q8" value="a"> Tomate, aguacate, nopal</label>
+                <label><input type="radio" name="q8" value="b"> Zanahoria, pepino, espinaca</label>
+                <label><input type="radio" name="q8" value="c"> Papa, cebolla, lechuga</label>
+                <label><input type="radio" name="q8" value="d"> Todos los anteriores</label>
+            </div>
+
+            <div class="question">
+                <p>9. ¿Cuál es la principal diferencia entre el atole y el champurrado?</p>
+                <label><input type="radio" name="q9" value="a"> El atole es más espeso y tiene cacao</label>
+                <label><input type="radio" name="q9" value="b"> El champurrado es más espeso y tiene cacao</label>
+                <label><input type="radio" name="q9" value="c"> El atole no tiene sabor, mientras que el champurrado sí</label>
+                <label><input type="radio" name="q9" value="d"> No hay diferencia, son el mismo</label>
+            </div>
+
+            <div class="question">
+                <p>10. Verdadero o Falso: La cocina prehispánica mexicana influye en la gastronomía moderna del país.</p>
+                <label><input type="radio" name="q10" value="true"> Verdadero</label>
+                <label><input type="radio" name="q10" value="false"> Falso</label>
+            </div>
+
+            <button type="button" onclick="calificar()">Enviar</button>
+        </form>
+        <div id="resultado"></div>
+    </div>
+</body>
+</html>
